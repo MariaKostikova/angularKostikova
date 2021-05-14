@@ -1,0 +1,10 @@
+<input type="text" placeholder="Search" [(ngModel)]="search" />
+<ul>
+  <li *ngFor="let human of people | filter: search">
+    <span>
+      <h2>{{ human.nameHunam }}</h2>
+      <p>{{ human.state }}</p>
+      <input type="checkbox" [checked]="human.selected" />
+    </span>
+  </li>
+</ul>
